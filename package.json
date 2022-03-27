@@ -1,0 +1,29 @@
+{
+  "name": "furrybiblebot",
+  "version": "1.0.0",
+  "description": "A discord bot with calls to a bible API, converts the collected bits to furry, then sends it to a server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vacuousVersifer/FurryBibleBot.git"
+  },
+  "keywords": [
+    "Discord",
+    "bot",
+    "Bible",
+    "Furry"
+  ],
+  "author": "vacuousVersifer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vacuousVersifer/FurryBibleBot/issues"
+  },
+  "homepage": "https://github.com/vacuousVersifer/FurryBibleBot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "express": "^4.17.3"
+  }
+}
