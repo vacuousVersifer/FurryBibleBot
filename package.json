@@ -2,7 +2,7 @@
   "name": "furrybiblebot",
   "version": "1.0.0",
   "description": "A discord bot with calls to a bible API, converts the collected bits to furry, then sends it to a server",
-  "main": "index.js",
+  "main": "bot/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,15 @@
   },
   "homepage": "https://github.com/vacuousVersifer/FurryBibleBot#readme",
   "dependencies": {
-    "discord.js": "^13.6.0",
+    "@vacuousversifer/discord-big-letterifier": "^1.0.0",
+    "axios": "^0.26.1",
+    "cron": "^1.8.2",
+    "discord.js": "12.0.0",
+    "discord.js-commando": "^0.12.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0"
   }
 }
