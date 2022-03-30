@@ -38,6 +38,6 @@ axios
         })
       })
     })
-  })
+  });
 
 module.exports = furry;

@@ -27,7 +27,7 @@ module.exports = class BooksCommand extends Command {
     let reply = "";
     books.forEach(book => {
       let name = this.client.furry.translate(book.name);
-      reply += `\n${name}`
+      reply += `\n${name} (id: ${book.id})`
     })
     embed.setDescription(reply);
 
