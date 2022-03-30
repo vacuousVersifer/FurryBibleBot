@@ -1,7 +1,7 @@
 const { Command } = require("discord.js-commando");
 const { MessageEmbed } = require("discord.js");
 
-module.exports = class Chapters extends Command {
+module.exports = class ChaptersCommand extends Command {
   constructor(client) {
     super(client, {
       name: "chapters",
@@ -48,7 +48,7 @@ module.exports = class Chapters extends Command {
 
       this.client.furry.fetchedChapters.forEach(chapter => {
         if(chapter.bookId === bookID) {
-          reply += `\n${chapter.reference}`;
+          reply += `\n${chapter.reference} (id: ${chapter.id})`;
         }
       })
 

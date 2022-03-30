@@ -40,4 +40,29 @@ axios
     })
   });
 
+furry.getVerse = (verseID, callback) => {
+  axios
+  .get(`${base}/bibles/${BibleID}/verses/${verseID}?content-type=text&include-notes=false&include-titles=true&include-chapter-numbers=false&include-verse-numbers=false&include-verse-spans=false&use-org-id=false`)
+  .then(res => {
+    if(res.data.statusCode) {
+      callback(null, `Error Code: ${res.data.statusCode}`);
+    } else {
+      callback(res.data.data);
+    }
+  })
+  .catch(e => {
+    console.log(e);
+    callback(null, e)
+  })
+}
+
+furry.getChapter = (chapterID, callback) => {
+  axios
+  .get(`${base}/bibles/${BibleID}/chapters/${chapterID}`)
+  .then(res => {
+    callback(res.data.data);
+  })
+  .catch(e => console.error);
+}
+
 module.exports = furry;
